@@ -6,14 +6,14 @@ public class Cat {
     private String text;
     private String type;
     private String user;
-    private Integer upvotes;
+    private String upvotes;
 
     public Cat(
             @JsonProperty("id") String id,
             @JsonProperty("text") String text,
             @JsonProperty("type") String type,
             @JsonProperty("user") String user,
-            @JsonProperty("upvotes") Integer upvotes
+            @JsonProperty("upvotes") String upvotes
     ) {
         this.id = id;
         this.text = text;
@@ -38,7 +38,7 @@ public class Cat {
         return user;
     }
 
-    public Integer getUpvotes() {
+    public String getUpvotes() {
         return upvotes;
     }
 

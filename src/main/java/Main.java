@@ -27,7 +27,7 @@ public class Main {
         List<Cat> cats = parserHttpJsonToBeanList(response);
 
         cats.stream()
-                .filter((cat) -> cat.getUpvotes() != null && cat.getUpvotes() > 0)
+                .filter((cat) -> cat.getUpvotes() != null && Integer.parseInt(cat.getUpvotes()) > 0)
                 .forEach(System.out::println);
     }
 
